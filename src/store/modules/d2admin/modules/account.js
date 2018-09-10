@@ -36,9 +36,9 @@ export default {
           util.cookies.set('uuid', res.uuid)
           util.cookies.set('token', res.token)
           // 设置 vuex 用户信息
-          commit('d2admin/user/set', {
-            name: res.name
-          }, { root: true })
+          // commit('d2admin/user/set', {
+          //   name: res.name
+          // }, { root: true })
           // 用户登录后从持久化存储加载一系列的设置
           commit('load')
           // 更新路由 尝试去获取 cookie 里保存的需要重定向的页面完整地址
@@ -102,7 +102,7 @@ export default {
      */
     load (state) {
       // DB -> store 加载用户名
-      this.commit('d2admin/user/load')
+      // this.commit('d2admin/user/load')
       // DB -> store 加载主题
       this.commit('d2admin/theme/load')
       // DB -> store 加载页面过渡效果设置

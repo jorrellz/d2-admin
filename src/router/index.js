@@ -46,6 +46,7 @@ router.beforeEach((to, from, next) => {
             console.log(err)
             Message.error('Token失效，重新登录')
             store.dispatch('d2admin/account/logout', { vm: router.app })
+            NProgress.done()
           })
       } else {
         // token 不存在 代表当前用户登陆状态不合法
